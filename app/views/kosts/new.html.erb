@@ -1,0 +1,12 @@
+<div class="judul-dashboard">
+	<h1>Tambah Kosan</h1>
+</div>
+<% if @kost.errors.any? %>
+	<div>
+		<% @kost.errors.full_messages.each do |message| %>
+			<div><% message %></div><br>
+		<% end %>
+	</div>
+<% end %>
+
+<%= render 'form'%>

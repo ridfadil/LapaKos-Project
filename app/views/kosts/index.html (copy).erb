@@ -1,0 +1,15 @@
+<h1>Daftar Kosan:</h1>
+<% @kosts.each do |b| %>
+	<div>
+		<div><%= b.id %></div>
+		<div><%= b.nama_kos %></div>
+		<div><%= b.harga_kos %></div>
+		<div><%= b.fasilitas %></div>
+		<div><%= b.alamat %></div>
+		<div><%= b.keterangan_lain %></div>
+		<div><%= link_to 'show', {controller: 'kosts', action:'show', id: b.id} %></div>
+		<div><%= link_to 'edit', {controller: 'kosts', action:'edit', id: b.id} %></div>
+		<div><%= link_to 'delete', {controller: 'kosts', action:'destroy', id: b.id}, method: :delete %></div>
+		<br>
+	</div>
+<% end %>
